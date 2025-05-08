@@ -22,7 +22,7 @@ A Python-based tool for calculating Implied Volatility (IV), Option Greeks (Delt
 
 ## 📁 Project Structure
 
-```
+
 
 option\_analysis/
 │
@@ -31,9 +31,9 @@ option\_analysis/
 ├── .gitignore             # Git ignored files
 └── README.md              # This file
 
-````
 
----
+
+
 
 ## 🖥️ How to Run
 
@@ -41,7 +41,6 @@ option\_analysis/
    ```bash
    git clone https://github.com/your-username/option-analysis.git
    cd option-analysis
-````
 
 2. **Install the dependencies**:
 
@@ -114,9 +113,4 @@ Python Developer & ML Enthusiast
 
 This project is licensed under the [MIT License](LICENSE).
 
-```
-
 ---
-
-Let me know your GitHub repo name or if you want this tailored for Streamlit, Flask, or as a CLI app.
-```
