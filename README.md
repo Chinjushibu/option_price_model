@@ -1,101 +1,122 @@
-# 📈 Option Pricing Models: Mibian, Black-Scholes, and Heston
 
-This Python project dynamically calculates **Implied Volatility (IV)**, **Greeks**, and **option prices** using:
-- 📊 Mibian (Black-Scholes IV)
-- 🔬 Manual Black-Scholes for Greeks
-- 🧠 QuantLib’s Heston stochastic volatility model
+# 📈 Option Pricing & Greeks Analysis Tool
+
+A Python-based tool for calculating Implied Volatility (IV), Option Greeks (Delta, Gamma, Theta, Vega, Rho), and theoretical option prices using both the **Black-Scholes** and **Heston** stochastic volatility models.
 
 ---
 
-## ⚙️ Features
+## 🔧 Features
 
-- Dynamically accepts inputs (Spot, Strike, IV, etc.)
-- Calculates IV for call & put using **Mibian**
-- Computes option Greeks (Δ, Γ, Θ, Vega, Rho)
-- Calculates theoretical prices using **Heston model**
-- Fully modular and reusable
+- ✅ Dynamic user input support for:
+  - Spot price
+  - Strike price
+  - Interest rate
+  - Time to expiry
+  - Option prices
+- 📊 IV calculation using **Mibian** for both calls and puts
+- 📉 Black-Scholes Greeks calculator
+- ⚙️ Heston model pricing using **QuantLib**
+- 📦 Modular and easy-to-read codebase
 
 ---
 
-## 🚀 Setup Instructions
+## 📁 Project Structure
 
-### 1. 🔁 Clone this repository
+```
 
-git clone https://github.com/yourusername/option-pricing-models.git
-cd option-pricing-models
-2. 🧪 Create Virtual Environment (Recommended)
-
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. 📦 Install Required Libraries
-
-pip install mibian scipy QuantLib-Python
-🧠 How It Works
-Input Parameters:
-You can provide these interactively or hardcoded:
-
-Spot Price (S)
-
-Strike Price (K)
-
-Call & Put Market Price
-
-Risk-free Interest Rate (r)
-
-Dividend Yield
-
-Days to Expiry
-
-Output:
-Call & Put Implied Volatility (IV)
-
-Call & Put Greeks
-
-Heston Call & Put Prices
-
-▶️ Usage
-Run the main file:
-
-python option_models.py
-You’ll be prompted to enter:
-
-Spot price
-
-Strike price
-
-Call & Put price
-
-Days to expiry
-
-Risk-free rate
-
-🧪 Example Output
-
-Call IV: 18.62%
-Put IV: 22.14%
-Call Greeks: Δ=0.66, Γ=0.0002, Θ=-3.14, Vega=0.84, Rho=7.91
-Put Greeks: Δ=-0.34, Γ=0.0002, Θ=-2.88, Vega=0.84, Rho=-6.82
-Heston Call Price: ₹1428.94
-Heston Put Price: ₹2.01
-🛠️ File Structure
-
-option-pricing-models/
+option\_analysis/
 │
-├── option_models.py      # Main script
-├── README.md             # This documentation
-└── .gitignore            # Python & env exclusions
+├── option\_models.py       # Main script with dynamic input and calculations
+├── requirements.txt       # Python dependencies
+├── .gitignore             # Git ignored files
+└── README.md              # This file
 
-🧠 Why Use the Heston Model?
-While Black-Scholes assumes constant volatility, the Heston model adds a stochastic process to volatility. It’s more accurate in real markets, especially near expiry or with skewed IVs.
+````
 
-👨‍💻 Author
-Chinju Shibu
-Python Developer | AI-ML Enthusiast
-LinkedIn
-📧 chinjushibu912@gmail.com
+---
 
-📜 License
-This project is open-source under the MIT License.
+## 🖥️ How to Run
 
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/option-analysis.git
+   cd option-analysis
+````
 
+2. **Install the dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the script**:
+
+   ```bash
+   python option_models.py
+   ```
+
+---
+
+## ⚙️ Requirements
+
+* Python 3.8+
+* [QuantLib](https://www.quantlib.org/)
+* [Mibian](https://pypi.org/project/mibian/)
+* SciPy, NumPy
+
+To install manually:
+
+```bash
+pip install mibian QuantLib-Python scipy numpy
+```
+
+---
+
+## 📌 Example Use Case
+
+Given:
+
+* Spot Price: ₹24,401.2
+* Strike Price: ₹23,000
+* Call Price: ₹1429.37
+* Put Price: ₹1.72
+* Risk-Free Rate: 6%
+* Time to Expiry: 7 Days
+
+The script will output:
+
+* Implied Volatility for both call and put
+* Black-Scholes Greeks
+* Heston model prices
+
+---
+
+## 📈 Why Use the Heston Model?
+
+Unlike Black-Scholes, the Heston model:
+
+* Allows for **stochastic volatility** (volatility can change over time)
+* Is more realistic for pricing options in volatile markets
+* Provides better alignment with market-observed option prices
+
+---
+
+## 🧠 Author
+
+**Chinju Shibu**
+Python Developer & ML Enthusiast
+📧 [chinjushibu912@gmail.com](mailto:chinjushibu912@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/chinju-shibu-aba059218/)
+
+---
+
+## 📃 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+```
+
+---
+
+Let me know your GitHub repo name or if you want this tailored for Streamlit, Flask, or as a CLI app.
+```
